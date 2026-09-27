@@ -7,36 +7,23 @@ html, body {
   background: #000;
 }
 
-/*
- * The source image is horizontally oriented (landscape).
- * On landscape screens, object-fit: cover fills the viewport with no
- * empty space, showing the full image since the viewport's aspect ratio
- * is close to (or wider than) the image's.
- */
 .fullscreen-image {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
-/*
- * On vertical (portrait) screens, rotate the image 90deg so it lies in
- * landscape orientation again, then let it "contain" within the rotated
- * frame. This shows the entire image with no trimming; any leftover
- * space is letterboxed (filled with the background color) instead of
- * cropping the image.
- */
 @media (orientation: portrait) {
   .fullscreen-image {
-    top: 50%;
-    left: 50%;
-    width: 100vh;
-    height: 100vw;
-    transform: translate(-50%, -50%) rotate(90deg);
-    object-fit: contain;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    transform: none;
   }
 }
