@@ -33,11 +33,11 @@ styled differently depending on screen orientation (via a CSS
   `100vh` with `object-fit: contain`, so the entire image is shown with no
   trimming; any leftover space is letterboxed (filled with the black
   background) instead of cropping the image.
-- **Vertical (portrait) screens**: no rotation is applied. The image is
-  shown as a full-width horizontal band centered in the middle of the
-  screen (`top: 10vh`, `height: 80vh`, leaving equal black margins above
-  and below), with `object-fit: cover` filling that band edge-to-edge
-  (cropping some of the image's edges as needed).
+- **Vertical (portrait) screens**: no rotation is applied. The image uses
+  the same `100vw` x `100vh` / `object-fit: contain` sizing as landscape,
+  so the full width of the image is always shown with no left/right
+  cropping; the leftover vertical space is letterboxed (black gaps above
+  and below) rather than zooming in and trimming the photo.
 
 ## Replacing the image
 

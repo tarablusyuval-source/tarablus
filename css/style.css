@@ -19,11 +19,11 @@ html, body {
 
 @media (orientation: portrait) {
   .fullscreen-image {
-    top: 10vh;
+    top: 0;
     left: 0;
     width: 100vw;
-    height: 80vh;
-    object-fit: cover;
+    height: 100vh;
+    object-fit: contain;
     transform: none;
   }
 }
