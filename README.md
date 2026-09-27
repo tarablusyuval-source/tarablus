@@ -6,11 +6,20 @@ A minimal single-page site that displays one full-screen horizontal image.
 
 ```
 Tarablus/
-├── index.html          # Page markup, loads the image
+├── index.html            # Page markup, loads the image
 ├── css/
-│   └── style.css       # Full-screen responsive image styling
+│   └── style.css         # Full-screen responsive image styling
 ├── images/
-│   └── feet.jpg        # The displayed image (currently a sample placeholder)
+│   └── feet.jpg          # The displayed image
+├── icons/
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon-192x192.png
+│   ├── favicon-512x512.png
+│   └── apple-touch-icon.png
+├── favicon.ico            # Multi-resolution (16/32/48px) favicon
+├── site.webmanifest       # Icon metadata for PWA/mobile home-screen use
+├── CNAME                  # Custom domain for GitHub Pages
 └── README.md
 ```
 
@@ -36,6 +45,19 @@ styled differently depending on screen orientation (via a CSS
 Replace [images/feet.jpg](images/feet.jpg) with the real horizontal image,
 keeping the same filename (or update the `src` in
 [index.html](index.html) if you rename it).
+
+## Favicon / site icon
+
+The browser tab icon (`favicon.ico` plus the PNGs in [icons/](icons)) is a
+center-cropped square taken from [images/feet.jpg](images/feet.jpg). If you
+replace the main image, regenerate the icons to match (any square-crop +
+resize tool, or an online favicon generator, works with
+`images/feet.jpg` as input) to produce:
+
+- `favicon.ico` — multi-resolution (16/32/48px)
+- `icons/favicon-16x16.png`, `icons/favicon-32x32.png`
+- `icons/favicon-192x192.png`, `icons/favicon-512x512.png`
+- `icons/apple-touch-icon.png` (180x180)
 
 ## Local preview
 
