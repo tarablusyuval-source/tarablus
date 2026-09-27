@@ -29,16 +29,15 @@ Tarablus/
 styled differently depending on screen orientation (via a CSS
 `orientation` media query):
 
-- **Horizontal (landscape) screens**: `object-fit: cover` sizes the image
-  to `100vw` x `100vh`, filling the screen with no empty space. The full
-  image is shown since the viewport's aspect ratio is close to (or wider
-  than) the image's.
-- **Vertical (portrait) screens**: the image is rotated 90° (`transform:
-  rotate(90deg)`) so it lies flat in landscape orientation again, sized to
-  `100vh` x `100vw` before rotation, then displayed with
-  `object-fit: contain`. This shows the **entire image with no trimming**;
-  any leftover space is letterboxed (filled with the black background)
-  instead of cropping the image.
+- **Horizontal (landscape) screens**: the image is sized to `100vw` x
+  `100vh` with `object-fit: contain`, so the entire image is shown with no
+  trimming; any leftover space is letterboxed (filled with the black
+  background) instead of cropping the image.
+- **Vertical (portrait) screens**: no rotation is applied. The image is
+  shown as a full-width horizontal band centered in the middle of the
+  screen (`top: 10vh`, `height: 80vh`, leaving equal black margins above
+  and below), with `object-fit: cover` filling that band edge-to-edge
+  (cropping some of the image's edges as needed).
 
 ## Replacing the image
 
