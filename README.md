@@ -50,3 +50,22 @@ npx serve .
 
 Push this repository to GitHub named `tarablus`, then enable GitHub Pages
 (Settings → Pages) for the `main` branch, root folder.
+
+## Custom domain (www.tarablus.co.il)
+
+The [CNAME](CNAME) file tells GitHub Pages to serve this site at
+`www.tarablus.co.il`. To finish wiring it up:
+
+1. At your domain's DNS provider, add a `CNAME` record:
+   - Host/name: `www`
+   - Value/target: `tarablusyuval-source.github.io`
+2. (Optional but recommended) Make the bare domain `tarablus.co.il` redirect
+   to `www.tarablus.co.il` too, by adding these `A` records for the apex
+   (`@`) host, pointing to GitHub Pages' IPs:
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
+3. In the GitHub repo, go to Settings → Pages → set "Custom domain" to
+   `www.tarablus.co.il` and save. Wait for DNS check to pass, then enable
+   "Enforce HTTPS".
