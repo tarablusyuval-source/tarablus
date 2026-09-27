@@ -72,6 +72,19 @@ npx serve .
 Push this repository to GitHub named `tarablus`, then enable GitHub Pages
 (Settings → Pages) for the `main` branch, root folder.
 
+Deploys are usually live within a minute or two of pushing. If a change
+doesn't seem to show up on a phone or browser, it's almost always local
+caching rather than a slow deploy — see "Cache busting" below.
+
+## Cache busting
+
+[index.html](index.html) loads the stylesheet with a version query string
+(`css/style.css?v=2`) so browsers fetch the new file instead of serving a
+stale cached copy. **Bump this `v=` number every time `css/style.css`
+changes** so visitors (especially mobile browsers, which cache
+aggressively) pick up the update immediately instead of waiting for the
+cache to expire.
+
 ## Custom domain (www.tarablus.co.il)
 
 The [CNAME](CNAME) file tells GitHub Pages to serve this site at
